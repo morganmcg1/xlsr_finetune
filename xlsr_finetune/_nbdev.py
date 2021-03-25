@@ -2,22 +2,28 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"file_exists": "02_aug.ipynb",
-         "ds_file_exists": "02_aug.ipynb",
-         "filter_for_exists": "02_aug.ipynb",
-         "drop_missing_files": "02_aug.ipynb",
-         "add_ds": "02_aug.ipynb",
-         "remove_special_characters": "02_aug.ipynb",
-         "chars_to_ignore_regex": "02_aug.ipynb",
-         "extract_all_chars": "02_aug.ipynb",
-         "get_char_vocab": "02_aug.ipynb",
-         "process_vocab": "02_aug.ipynb",
-         "extract_vocab": "02_aug.ipynb",
+index = {"file_exists": "01_data.ipynb",
+         "ds_file_exists": "01_data.ipynb",
+         "filter_for_exists": "01_data.ipynb",
+         "drop_missing_files": "01_data.ipynb",
+         "add_ds": "01_data.ipynb",
+         "merge_ds": "01_data.ipynb",
+         "remove_special_characters": "01_data.ipynb",
+         "chars_to_ignore_regex": "01_data.ipynb",
+         "extract_all_chars": "01_data.ipynb",
+         "get_char_vocab": "01_data.ipynb",
+         "process_vocab": "01_data.ipynb",
+         "extract_vocab": "01_data.ipynb",
          "speech_file_to_array": "01_data.ipynb",
-         "speech_file_to_array_fn": "02_aug.ipynb"}
+         "DataCollatorCTCWithPadding": "04_evaluation.ipynb",
+         "wer_metric": "03_training.ipynb",
+         "compute_wer_metric": "03_training.ipynb",
+         "setup_wandb": "03_training.ipynb"}
 
 modules = ["data.py",
-           "training.py"]
+           "augmentation.py",
+           "training.py",
+           "evaluation.py"]
 
 doc_url = "https://morganmcg1.github.io/xlsr_finetune/"
 
