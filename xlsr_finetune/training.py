@@ -85,7 +85,7 @@ class DataCollatorCTCWithPadding:
 wer_metric = load_metric("wer")
 
 # Cell
-def compute_wer_metric(pred):
+def compute_wer_metric(pred, processor=None):
     pred_logits = pred.predictions
     pred_ids = np.argmax(pred_logits, axis=-1)
 

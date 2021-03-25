@@ -62,11 +62,14 @@ def merge_ds(ds, new_ds, shuffle=True):
     return ds
 
 # Cell
-
 chars_to_ignore_regex = '[\,\?\.\!\-\;\:\"\“\%\‘\”\�\(\)\-\*]'
 
-def remove_special_characters(batch):
-    batch["sentence"] = re.sub(chars_to_ignore_regex, '', batch["sentence"]).lower() + " "
+def remove_special_characters(batch, evaluate=False):
+    if evaluate: batch["sentence"] = re.sub(chars_to_ignore_regex, '',
+                                            batch["sentence"]).lower()
+    else: batch["sentence"] = re.sub(chars_to_ignore_regex, '',
+                                            batch["sentence"]).lower() + " "
+
     batch["sentence"] = re.sub('[\’]', '\'', batch["sentence"])
     batch["sentence"] = re.sub('[\’]', '\'', batch["sentence"])
     batch["sentence"] = re.sub('[\–]', '-', batch["sentence"])
@@ -115,12 +118,16 @@ def extract_vocab(train_ds, test_ds=None, save=True, save_dir='data', fn='vocab.
     return vocab
 
 # Cell
-def speech_file_to_array(batch, resample=True, new_sr=16_000):
+def speech_file_to_array(batch, resample=True, new_sr=16_000, evaluate=False):
     try:
         speech_array, sampling_rate = torchaudio.load(batch["path"])
 
         if resample:
-            batch["speech"] = librosa.resample(np.asarray(speech_array[0].numpy()), sampling_rate, new_sr)
+            if evaluate:
+                resampler = torchaudio.transforms.Resample(sampling_rate, new_sr)
+                batch["speech"] = resampler(speech_array).squeeze().numpy()
+            else:
+                batch["speech"] = librosa.resample(np.asarray(speech_array[0].numpy()), sampling_rate, new_sr)
             batch["sampling_rate"] = new_sr
         else:
             batch["speech"] = speech_array[0].numpy()
