@@ -10,7 +10,7 @@ from datasets import load_metric
 wer_metric = load_metric("wer")
 
 # Cell
-def evaluate_xlsr(batch):
+def evaluate_xlsr(batch, model=None, processor=None):
     inputs = processor(batch["speech"], sampling_rate=16_000, return_tensors="pt", padding=True)
 
     with torch.no_grad():
