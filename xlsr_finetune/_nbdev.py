@@ -15,10 +15,11 @@ index = {"file_exists": "01_data.ipynb",
          "process_vocab": "01_data.ipynb",
          "extract_vocab": "01_data.ipynb",
          "speech_file_to_array": "01_data.ipynb",
-         "DataCollatorCTCWithPadding": "04_evaluation.ipynb",
-         "wer_metric": "03_training.ipynb",
+         "DataCollatorCTCWithPadding": "03_training.ipynb",
+         "wer_metric": "04_evaluation.ipynb",
          "compute_wer_metric": "03_training.ipynb",
-         "setup_wandb": "03_training.ipynb"}
+         "setup_wandb": "03_training.ipynb",
+         "evaluate_xlsr": "04_evaluation.ipynb"}
 
 modules = ["data.py",
            "augmentation.py",
