@@ -13,6 +13,7 @@ from pathlib import Path
 from functools import partial
 
 # Cell
+#all_slow
 import librosa
 import torchaudio
 from datasets import load_dataset, load_metric, concatenate_datasets
