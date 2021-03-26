@@ -4,6 +4,9 @@
 
 Much of the code in this project is taken from Patrick Von Platen's brillian Hugging Face [blog post here](https://huggingface.co/blog/fine-tune-xlsr-wav2vec2)
 
+## Getting Started
+See the [Demo Training notebook](https://github.com/morganmcg1/xlsr_finetune/blob/master/notebooks/_train_demo.ipynb) at `xlsr_finetune/notebooks/_train_demo.ipynb` for an end-to-end example of data processing, model training, metrics logging and data and model versioning
+
 ## Install
 
 ```
@@ -21,10 +24,6 @@ or you can run the below directly from a notebook
 pip install git+https://github.com/morganmcg1/xlsr_finetune.git
 ```
 
-## How to use
-
-Coming soon...
-
 ## Contributing
 
-To contribute, make sure you have the latest version of nbdev installed
+To contribute, make sure you have the latest version of nbdev installed and read the `CONTRIBUTING.md` file
