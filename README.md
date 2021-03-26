@@ -1,8 +1,11 @@
 # XLSR Finetune
 > A bunch of handy functions to make fine-tuning the XLSR-Wav2Vec2 speech recognition model much easier
 
+## Clean XLSR Code
+This contains clean simple code to do much of the setup, data exploration, data processing, training, logging and data versioning to enable easier fine-tuning of XLSR-Wav2Vec2. Create during the [Hugging Face XLSR community effort](https://discuss.huggingface.co/t/open-to-the-community-xlsr-wav2vec2-fine-tuning-week-for-low-resource-languages/4467).
 
-Much of the code in this project is taken from Patrick Von Platen's brillian Hugging Face [blog post here](https://huggingface.co/blog/fine-tune-xlsr-wav2vec2)
+### Thanks
+Much of the code in this project is taken from Patrick Von Platen's brilliant Hugging Face [blog post here](https://huggingface.co/blog/fine-tune-xlsr-wav2vec2)
 
 ## Getting Started
 See the [Demo Training notebook](https://github.com/morganmcg1/xlsr_finetune/blob/master/notebooks/_train_demo.ipynb) at `xlsr_finetune/notebooks/_train_demo.ipynb` for an end-to-end example of data processing, model training, metrics logging and data and model versioning
