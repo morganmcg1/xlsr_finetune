@@ -62,7 +62,7 @@ def merge_ds(ds, new_ds, shuffle=True):
     return ds
 
 # Cell
-chars_to_ignore_regex = '[\,\?\.\!\-\;\:\"\“\%\‘\”\�\(\)\-\*]'
+chars_to_ignore_regex = '[\,\?\.\!\-\;\:\"\“\%\‘\”\�\(\)\-\*\/\\]'
 
 def remove_special_characters(batch, evaluate=False):
     if evaluate: batch["sentence"] = re.sub(chars_to_ignore_regex, '',
