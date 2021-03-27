@@ -18,13 +18,14 @@ index = {"file_exists": "01_data.ipynb",
          "DataCollatorCTCWithPadding": "03_training.ipynb",
          "wer_metric": "04_evaluation.ipynb",
          "compute_wer_metric": "03_training.ipynb",
-         "setup_wandb": "03_training.ipynb",
-         "evaluate_xlsr": "04_evaluation.ipynb"}
+         "evaluate_xlsr": "04_evaluation.ipynb",
+         "setup_wandb": "05_wandb_utils.ipynb"}
 
 modules = ["data.py",
            "augmentation.py",
            "training.py",
-           "evaluation.py"]
+           "evaluation.py",
+           "wandbutils.py"]
 
 doc_url = "https://morganmcg1.github.io/xlsr_finetune/"
 
