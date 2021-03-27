@@ -31,7 +31,7 @@ The code above will generate this:
 
 ![images/artifact_audio.png](notebooks/images/artifacts_audio.png)
 
-## Demo Training Notebook
+## Demo Training Demo
 
 `xlsr_finetune/notebooks/_train_demo.ipynb`
 
@@ -51,7 +51,7 @@ pip install -e .
 or you can run the below directly from a notebook
 
 ```
-!pip install git+https://github.com/morganmcg1/xlsr_finetune.git
+pip install git+https://github.com/morganmcg1/xlsr_finetune.git
 ```
 
 ## Contributing

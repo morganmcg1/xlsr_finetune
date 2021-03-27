@@ -13,6 +13,7 @@ from datasets import Dataset, load_dataset
 
 # Cell
 def setup_wandb(entity='wandb', project_name='xlsr', log_model=True):
+    import os
     import wandb
     # Set W&B user name
     os.environ["WANDB_ENTITY"] = entity
